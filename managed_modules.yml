@@ -4,3 +4,5 @@
 - puppet-motd
 - puppet-etckeeper
 - puppet-augeas
+- puppet-linuxcounter
+- puppet-mysensors
