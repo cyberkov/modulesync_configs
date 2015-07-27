@@ -14,14 +14,23 @@
     env: PUPPET_GEM_VERSION="~> 4.0" STRICT_VARIABLES="yes"
 Gemfile:
   required:
+    ':test':
+      - gem: "rspec-puppet"
+        git: 'https://github.com/rodjek/rspec-puppet.git'
     ':development, :unit_tests':
       - gem: rspec-core
         version: '3.1.7'
+      - gem: "rspec-puppet-facts"
       - gem: puppetlabs_spec_helper
       - gem: simplecov
       - gem: puppet_facts
       - gem: json
       - gem: metadata-json-lint
+      - gem: travis
+      - gem: travis-lint
+      - gem: vagrant-wrapper
+      - gem: puppet-blacksmith
+      - gem: guard-rake
     ':system_tests':
       - gem: beaker-rspec
       - gem: serverspec
